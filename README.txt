@@ -1,0 +1,1 @@
+The csv file before conversion aggregation is limited only when there is an address list in column A simply. This address list is the member's address list (we have lost it for public use). Used to find out which districts have the most members
