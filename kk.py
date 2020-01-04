@@ -18,6 +18,8 @@ for row in reader:
   ws.append(row)
 f.close()
 
+if not os.path.exists("./data_xlsx"):
+  os.makedirs("./data_xlsx")
 wb.save("./data_xlsx/{0}{1}.xlsx".format(query_word,"_集計"))
 # ~~csv→xlsx convert end~~~
 
@@ -49,7 +51,7 @@ for i in range(ws.max_row):
   temp = ws.cell(row=i+1, column=1).value # 何回も出てくるので
   adress_list.append(temp)
 
-  for j, name in enumerate(Miyagi_col):
+  for j, name in enumerate(aggregate_list):
     if name in temp:
       table[j] += 1 # 対応するところへカウント
       break
