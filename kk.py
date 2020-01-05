@@ -45,7 +45,7 @@ ws = wb[wb.sheetnames[0]]
 #xlsx内の住所のすべてをリスト化
 adress_list = []
 
-table = [0] * 27
+table = [0] * len(aggregate_list)
 
 for i in range(ws.max_row):
   temp = ws.cell(row=i+1, column=1).value # 何回も出てくるので
